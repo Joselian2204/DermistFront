@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "402591314643",
+    "project_id": "dermist-52278",
+    "storage_bucket": "dermist-52278.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402591314643:android:36d81f495891e0734d9a26",
+        "android_client_info": {
+          "package_name": "com.example.dermist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "402591314643-cv3jr8q62co8cu75deip37ur0okqrc8c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoJX6bdobF7cJR-HUOgZgJ95UXBP0SHhM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "402591314643-cv3jr8q62co8cu75deip37ur0okqrc8c.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "402591314643-a5ano3kgr8npoi85op6gluvdhd5fm0kd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.dermist"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
