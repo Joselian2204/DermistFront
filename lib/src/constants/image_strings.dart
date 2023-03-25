@@ -1,0 +1,1 @@
+const String imagotipoColor = 'assets/logo/dermist-color.png';
