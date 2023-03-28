@@ -1,12 +1,9 @@
 import 'package:dermist/src/features/authentication/screens/home_page/home_page.dart';
-import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class LogInController extends GetxController{
-
-  static LogInController get find => Get.find();
 
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
