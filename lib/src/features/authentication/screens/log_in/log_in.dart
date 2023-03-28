@@ -1,7 +1,9 @@
 import 'package:dermist/src/constants/colors.dart';
 import 'package:dermist/src/constants/image_strings.dart';
+import 'package:dermist/src/features/authentication/controllers/log_in_controller.dart';
 import 'package:dermist/src/utils/theme/widget_themes/log_in_btn.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class LogIn extends StatelessWidget{
   const LogIn({Key? key}) : super(key: key);
@@ -35,7 +37,9 @@ class LogIn extends StatelessWidget{
               const SizedBox(height: 70),
               ElevatedButton.icon(
                   style: buttonLogIn,
-                  onPressed: (){},
+                  onPressed: (){
+                    Get.find<LogInController>().signInGoogle();
+                  },
                   icon: const Image(image: AssetImage(googleLogo), width: 25),
                   label: const Text('Continuar con Google')
               ),
@@ -75,13 +79,6 @@ class LogIn extends StatelessWidget{
               ),
             ],
           ),
-          /*child: Stack(
-            children: [
-              /*const Image(image: AssetImage(logInBg),
-                fit: BoxFit.fitWidth,
-              ),*/
-            ],
-          ),*/
         ),
       ),
     );

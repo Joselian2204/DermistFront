@@ -1,3 +1,4 @@
+import 'package:dermist/src/features/authentication/controllers/log_in_controller.dart';
 import 'package:dermist/src/features/authentication/controllers/splash_screen_controller.dart';
 import 'package:dermist/src/features/authentication/screens/splash_screen/splash_screen.dart';
 import 'package:dermist/src/utils/theme/theme.dart';
@@ -28,7 +29,6 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
@@ -42,6 +42,7 @@ class _MyAppState extends State<MyApp> {
 
   @override
   void initState() {
+    Get.put<LogInController>(LogInController());
     Get.put<SplashScreenController>(SplashScreenController());
     super.initState();
   }
