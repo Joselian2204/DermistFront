@@ -68,6 +68,7 @@ flutter:
     - assets/images/dermist-white.png
     - assets/images/log-in-bg.png
     - assets/images/doctors.png
+    - assets/images/log-out.png
 
     - assets/logo/google.png
 

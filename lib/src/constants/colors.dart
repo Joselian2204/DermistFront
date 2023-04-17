@@ -9,3 +9,5 @@ const primaryBlack = Color(0xFF000000);
 const pureWhite = Color(0xFFFFFFFF);
 
 const smallText = Color(0x80000000);
+
+const unselectedNav = Color(0xAB1D5670);

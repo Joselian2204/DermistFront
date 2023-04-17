@@ -1,3 +1,4 @@
+import 'package:dermist/src/common_widgets/backgrounds.dart';
 import 'package:dermist/src/constants/colors.dart';
 import 'package:dermist/src/constants/image_strings.dart';
 import 'package:dermist/src/features/authentication/controllers/log_in_controller.dart';
@@ -5,7 +6,6 @@ import 'package:dermist/src/utils/theme/widget_themes/log_in_btn.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'Widgets/background.dart';
 
 class LogIn extends StatelessWidget{
   const LogIn({Key? key}) : super(key: key);
@@ -25,8 +25,8 @@ class LogIn extends StatelessWidget{
           child: Stack(
             children: [
               CustomPaint(
-                size: Size(size.width, (size.width*1.5531400966183575).toDouble()), //You can Replace [WIDTH] with your desired width for Custom Paint and height will be calculated automatically
-                painter: RPSCustomPainter(),
+                size: Size(size.width, (size.width*1.587179487179487).toDouble()), //You can Replace [WIDTH] with your desired width for Custom Paint and height will be calculated automatically
+                painter: RPSCustomPainterLogIn(),
               ),
               SizedBox(
                 width: size.width,

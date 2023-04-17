@@ -1,5 +1,6 @@
 import 'package:dermist/src/features/authentication/controllers/log_in_controller.dart';
 import 'package:dermist/src/features/authentication/controllers/splash_screen_controller.dart';
+import 'package:dermist/src/features/authentication/navbar/navbar.dart';
 import 'package:dermist/src/features/authentication/screens/splash_screen/splash_screen.dart';
 import 'package:dermist/src/utils/theme/theme.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
