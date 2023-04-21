@@ -7,7 +7,9 @@ const accentWhite = Color(0xFFE3F6F5);
 
 const primaryBlack = Color(0xFF000000);
 const pureWhite = Color(0xFFFFFFFF);
+const primaryGray = Color(0XFFE6E6E6);
 
 const smallText = Color(0x80000000);
 
 const unselectedNav = Color(0xAB1D5670);
+const transparencyBlack = Color(0x80000000);

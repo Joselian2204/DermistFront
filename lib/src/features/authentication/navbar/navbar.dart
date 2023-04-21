@@ -21,7 +21,7 @@ class NavBar extends StatelessWidget{
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(
-          selectedItemColor: primaryColor,
+          selectedItemColor: secondaryColor,
           unselectedItemColor: unselectedNav,
           currentIndex: controller.tabIndex,
           onTap: controller.changeTabIndex,
