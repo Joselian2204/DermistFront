@@ -11,16 +11,18 @@ class SearchBar extends StatelessWidget{
       width: size.width,
       child: Center(
         child: Container(
-          width: size.width * 0.84,
+          width: size.width * 0.9,
+          height: 50,
           child: TextField(
             style: const TextStyle(
               color: secondaryColor,
             ),
             decoration: InputDecoration(
+              errorBorder: InputBorder.none,
               filled: true,
               fillColor: primaryGray,
               border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(7),
                 borderSide: BorderSide.none
               ),
               hintText: "ej. acne comedogénico",

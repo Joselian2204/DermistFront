@@ -7,7 +7,7 @@ const accentWhite = Color(0xFFE3F6F5);
 
 const primaryBlack = Color(0xFF000000);
 const pureWhite = Color(0xFFFFFFFF);
-const primaryGray = Color(0XFFE6E6E6);
+const primaryGray = Color(0x4CCBCBCB);
 
 const smallText = Color(0x80000000);
 
