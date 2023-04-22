@@ -4,6 +4,7 @@ import 'package:dermist/src/features/authentication/controllers/navbar_controlle
 import 'package:dermist/src/features/authentication/screens/form/form.dart';
 import 'package:dermist/src/features/authentication/screens/home_page/home_page.dart';
 import 'package:dermist/src/features/authentication/screens/profile/profile.dart';
+import 'package:dermist/src/features/authentication/screens/result/result.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -20,6 +21,7 @@ class NavBar extends StatelessWidget{
             HomePage(),
             FormDermist(),
             Profile(),
+            ObtainedResult()
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(
@@ -30,7 +32,8 @@ class NavBar extends StatelessWidget{
           items: [
             bottombarItem(Icons.home_rounded, "Inicio"),
             bottombarItem(Icons.add, "Nuevo"),
-            bottombarItem(Icons.person_rounded, "Perfil")
+            bottombarItem(Icons.person_rounded, "Perfil"),
+            bottombarItem(Icons.work, "Resultado")
           ],
         )
       );

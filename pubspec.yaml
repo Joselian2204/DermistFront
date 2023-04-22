@@ -76,6 +76,10 @@ flutter:
     - assets/images/card/two.png
     - assets/images/card/three.png
 
+    - assets/images/medalls/gold.png
+    - assets/images/medalls/silver.png
+    - assets/images/medalls/copper.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
