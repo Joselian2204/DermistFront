@@ -11,3 +11,14 @@ final ButtonStyle buttonLogIn = ElevatedButton.styleFrom(
     )
   )
 );
+
+final ButtonStyle buttonCamera = ElevatedButton.styleFrom(
+    minimumSize: Size(300, 44),
+    primary: primaryColor,
+    elevation: 0,
+    shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(
+            Radius.circular(10)
+        )
+    )
+);

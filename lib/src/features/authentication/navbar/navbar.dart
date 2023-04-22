@@ -1,6 +1,7 @@
 import 'package:dermist/src/common_widgets/bottom_bar_item.dart';
 import 'package:dermist/src/constants/colors.dart';
 import 'package:dermist/src/features/authentication/controllers/navbar_controller.dart';
+import 'package:dermist/src/features/authentication/screens/form/form.dart';
 import 'package:dermist/src/features/authentication/screens/home_page/home_page.dart';
 import 'package:dermist/src/features/authentication/screens/profile/profile.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +18,7 @@ class NavBar extends StatelessWidget{
           index: controller.tabIndex,
           children:[
             HomePage(),
+            FormDermist(),
             Profile(),
           ],
         ),
