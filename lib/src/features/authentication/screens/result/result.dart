@@ -2,6 +2,7 @@ import 'package:dermist/src/constants/colors.dart';
 import 'package:dermist/src/constants/image_strings.dart';
 import 'package:dermist/src/features/authentication/screens/result/Widgets/card_result.dart';
 import 'package:dermist/src/features/authentication/screens/result/Widgets/data_registered.dart';
+import 'package:dermist/src/utils/theme/widget_themes/log_in_btn.dart';
 import 'package:flutter/material.dart';
 
 class ObtainedResult extends StatelessWidget{
@@ -21,17 +22,13 @@ class ObtainedResult extends StatelessWidget{
           ),
           child: Column(
             children: [
-              GestureDetector(
-                onTap: () {},
-                child: Row(
-                  children: const [
-                    Icon(Icons.arrow_back_ios, color: secondaryColor, size: 28),
-                    Image(
-                      image: AssetImage(imagotipoColor),
-                      width: 145,
-                    )
-                  ],
-                ),
+              Row(
+                children: const [
+                  Image(
+                    image: AssetImage(imagotipoColor),
+                    width: 145,
+                  )
+                ],
               ),
               Row(
                 children: [
@@ -68,6 +65,17 @@ class ObtainedResult extends StatelessWidget{
                   CardResult()
                 ],
               ),
+              const SizedBox(height: 40,),
+              ElevatedButton.icon(
+                  style: buttonCamera,
+                  onPressed: (){},
+                  icon: const Icon(
+                    Icons.arrow_back_ios,
+                    size: 20,
+                    color: pureWhite,
+                  ),
+                  label: const Text('Pagina Principal')
+              )
             ],
           ),
         ),

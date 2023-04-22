@@ -95,7 +95,7 @@ class DataRecovered extends StatelessWidget{
                   )
               ),
             ],
-          )
+          ),
         ],
       ),
     );
