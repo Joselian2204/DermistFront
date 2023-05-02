@@ -7,8 +7,8 @@ import 'package:get/get.dart';
 class SplashScreen extends StatelessWidget{
   SplashScreen({Key? key}) : super(key: key);
 
-  final splashController = Get.find<SplashScreenController>();
-
+  final splashController =
+  Get.put<SplashScreenController>(SplashScreenController());
   @override
   Widget build(BuildContext context){
     final size = MediaQuery.of(context).size;

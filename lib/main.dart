@@ -1,6 +1,5 @@
 import 'package:dermist/src/features/authentication/controllers/log_in_controller.dart';
 import 'package:dermist/src/features/authentication/controllers/splash_screen_controller.dart';
-import 'package:dermist/src/features/authentication/navbar/navbar.dart';
 import 'package:dermist/src/features/authentication/screens/splash_screen/splash_screen.dart';
 import 'package:dermist/src/utils/theme/theme.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
@@ -21,30 +20,21 @@ void main() async{
   runApp(const MyApp());
 }
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      initialBinding: BindingsBuilder((){
+        Get.put<LogInController>(LogInController());
+
+      }),
       defaultTransition: Transition.fadeIn,
       title: 'Dermist',
       debugShowCheckedModeBanner: false,
       theme: DermistAppTheme.lightTheme,
       home: SplashScreen(),
     );
-  }
-
-  @override
-  void initState() {
-    Get.put<LogInController>(LogInController());
-    Get.put<SplashScreenController>(SplashScreenController());
-    super.initState();
   }
 }

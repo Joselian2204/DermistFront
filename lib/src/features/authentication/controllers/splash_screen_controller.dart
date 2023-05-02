@@ -19,7 +19,6 @@ class SplashScreenController extends GetxController{
      await Future.delayed(const Duration(milliseconds: 500));
      animate.value = true;
      await Future.delayed(const Duration(milliseconds: 3000));
-     Get.to(() => LogIn());
    }
    catch(e){
      print(e.toString());
