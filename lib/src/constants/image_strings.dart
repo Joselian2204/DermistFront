@@ -10,3 +10,4 @@ const String logOut = 'assets/images/log-out.png';
 const String gold = 'assets/images/medalls/gold.png';
 const String silver = 'assets/images/medalls/silver.png';
 const String copper = 'assets/images/medalls/copper.png';
+const String isologo = 'assets/logo/Isologo.png';
