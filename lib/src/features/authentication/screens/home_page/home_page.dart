@@ -28,8 +28,8 @@ class HomePage extends StatelessWidget{
               ],
             ),
             Row(
-              children: const [
-                SizedBox(height:60.0),
+              children: [
+                const SizedBox(height:60.0),
                 SearchBar(),
               ],
             ),
