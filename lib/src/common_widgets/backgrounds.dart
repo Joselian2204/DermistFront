@@ -14,9 +14,9 @@ class RPSCustomPainterLogIn extends CustomPainter {
     path_0.lineTo(size.width,0);
     path_0.close();
 
-    Paint paint_0_fill = Paint()..style=PaintingStyle.fill;
-    paint_0_fill.shader = ui.Gradient.linear(Offset(size.width*-3.230308e-7,size.height*0.4054927), Offset(size.width*1.254631,size.height*0.9201179), [Color(0xff21ABA5).withOpacity(1),Color(0xff163A5F).withOpacity(1)], [0,1]);
-    canvas.drawPath(path_0,paint_0_fill);
+    Paint paint0fill = Paint()..style=PaintingStyle.fill;
+    paint0fill.shader = ui.Gradient.linear(Offset(size.width*-3.230308e-7,size.height*0.4054927), Offset(size.width*1.254631,size.height*0.9201179), [const Color(0xff21ABA5).withOpacity(1),const Color(0xff163A5F).withOpacity(1)], [0,1]);
+    canvas.drawPath(path_0,paint0fill);
 
   }
 
@@ -31,9 +31,9 @@ class RPSCustomPainterProfile extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
 
-    Paint paint_0_fill = Paint()..style=PaintingStyle.fill;
-    paint_0_fill.shader = ui.Gradient.linear(Offset(size.width*-0.000001755995,size.height*0.3043912), Offset(size.width*0.8892718,size.height*1.376921), [Color(0xff21ABA5).withOpacity(1),Color(0xff163A5F).withOpacity(1)], [0,1]);
-    canvas.drawRect(Rect.fromLTWH(0,0,size.width,size.height*1.023529),paint_0_fill);
+    Paint paint0fill = Paint()..style=PaintingStyle.fill;
+    paint0fill.shader = ui.Gradient.linear(Offset(size.width*-0.000001755995,size.height*0.3043912), Offset(size.width*0.8892718,size.height*1.376921), [const Color(0xff21ABA5).withOpacity(1),const Color(0xff163A5F).withOpacity(1)], [0,1]);
+    canvas.drawRect(Rect.fromLTWH(0,0,size.width,size.height*1.023529),paint0fill);
 
   }
 
@@ -48,9 +48,9 @@ class RPSCustomPainterLoading extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
 
-    Paint paint_0_fill = Paint()..style=PaintingStyle.fill;
-    paint_0_fill.shader = ui.Gradient.linear(Offset(size.width*-0.000001755995,size.height*0.2973934), Offset(size.width*1.576162,size.height*0.6131469), [Color(0xff21ABA5).withOpacity(1),Color(0xff163A5F).withOpacity(1)], [0,1]);
-    canvas.drawRRect(RRect.fromRectAndCorners(Rect.fromLTWH(0,0,size.width,size.height),bottomRight: Radius.circular(size.width*0.08717949),bottomLeft:  Radius.circular(size.width*0.08717949),topLeft:  Radius.circular(size.width*0.08717949),topRight:  Radius.circular(size.width*0.08717949)),paint_0_fill);
+    Paint paint0fill = Paint()..style=PaintingStyle.fill;
+    paint0fill.shader = ui.Gradient.linear(Offset(size.width*-0.000001755995,size.height*0.2973934), Offset(size.width*1.576162,size.height*0.6131469), [const Color(0xff21ABA5).withOpacity(1),const Color(0xff163A5F).withOpacity(1)], [0,1]);
+    canvas.drawRRect(RRect.fromRectAndCorners(Rect.fromLTWH(0,0,size.width,size.height),bottomRight: Radius.circular(size.width*0.08717949),bottomLeft:  Radius.circular(size.width*0.08717949),topLeft:  Radius.circular(size.width*0.08717949),topRight:  Radius.circular(size.width*0.08717949)),paint0fill);
 
   }
 

@@ -1,9 +1,11 @@
 import 'package:dermist/src/constants/colors.dart';
+import 'package:dermist/src/features/authentication/models/model_result.dart';
 import 'package:flutter/material.dart';
-import 'package:dermist/src/constants/image_strings.dart';
 
 class CardResult extends StatelessWidget {
-  const CardResult({Key? key}) : super(key: key);
+  final ModelResult result;
+  final String image;
+  const CardResult({Key? key,required this.result, required this.image}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,9 +27,9 @@ class CardResult extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Column(
-            children: const [
-              SizedBox(height: 15),
-              Image(image: AssetImage(gold))
+            children: [
+              const SizedBox(height: 20),
+              Image(image: AssetImage(image))
             ],
           ),
           const SizedBox(width: 20),
@@ -36,9 +38,9 @@ class CardResult extends StatelessWidget {
             children: [
               const SizedBox(height: 17),
               Row(
-                children: const [
-                  Text('Nombre Enfermedad',
-                    style: TextStyle(
+                children: [
+                  Text(result.name.split("_").map((e) => e.length>1?e[0].toUpperCase()+e.substring(1,e.length):e).join(" "),
+                    style: const TextStyle(
                         color: secondaryColor,
                         fontSize: 16,
                         fontWeight: FontWeight.bold
@@ -48,9 +50,9 @@ class CardResult extends StatelessWidget {
               ),
               const SizedBox(height: 15),
               Row(
-                children: const [
-                  Text('Probabilidad de Acierto: 100%',
-                    style: TextStyle(
+                children: [
+                  Text('Probabilidad de Acierto: ${(result.percentage*100).toStringAsFixed(2)}%',
+                    style: const TextStyle(
                         fontSize: 14,
                     ),
                   ),

@@ -1,7 +1,6 @@
-import 'package:dermist/src/features/authentication/screens/log_in/log_in.dart';
 import 'package:get/instance_manager.dart';
-import 'package:get/route_manager.dart';
 import 'package:get/state_manager.dart';
+import 'dart:developer' as developer;
 
 class SplashScreenController extends GetxController{
   static SplashScreenController get find => Get.find();
@@ -20,8 +19,8 @@ class SplashScreenController extends GetxController{
      animate.value = true;
      await Future.delayed(const Duration(milliseconds: 3000));
    }
-   catch(e){
-     print(e.toString());
+   catch(error){
+     developer.log(error.toString());
    }
   }
 }

@@ -1,5 +1,4 @@
 import 'package:dermist/src/features/authentication/navbar/navbar.dart';
-import 'package:dermist/src/features/authentication/screens/load_screen/load_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';

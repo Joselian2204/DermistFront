@@ -11,10 +11,10 @@ class SearchBar extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    return Container(
+    return SizedBox(
       width: size.width,
       child: Center(
-        child: Container(
+        child: SizedBox(
           width: size.width * 0.9,
           height: 50,
           child: TextField(
