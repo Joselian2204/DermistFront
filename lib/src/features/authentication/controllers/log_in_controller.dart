@@ -18,7 +18,7 @@ class LogInController extends GetxController{
       bool isSignedIn = await GoogleSignIn().isSignedIn();
       if(isSignedIn){
         currentUser.value = _auth.currentUser;
-        Get.offAll(NavBar());
+        Get.offAll(()=>NavBar());
       }
       else{
         Get.offAll(const LogIn());

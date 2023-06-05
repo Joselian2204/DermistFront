@@ -1,3 +1,4 @@
+import 'package:dermist/src/features/authentication/controllers/form_controller.dart';
 import 'package:dermist/src/features/authentication/controllers/log_in_controller.dart';
 import 'package:dermist/src/features/authentication/screens/splash_screen/splash_screen.dart';
 import 'package:dermist/src/utils/theme/theme.dart';
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       initialBinding: BindingsBuilder((){
         Get.put<LogInController>(LogInController());
+        Get.put<FormController>(FormController());
 
       }),
       defaultTransition: Transition.fadeIn,

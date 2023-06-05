@@ -10,7 +10,6 @@ import 'package:get/get.dart';
 
 class NavBar extends StatelessWidget{
   final controller = Get.put(NavBarController());
-  final controller2 = Get.put(FormController());
 
   NavBar({Key? key}) : super(key: key);
 
