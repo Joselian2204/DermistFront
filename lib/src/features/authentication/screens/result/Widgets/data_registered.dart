@@ -1,31 +1,33 @@
 import 'package:dermist/src/constants/colors.dart';
+import 'package:dermist/src/features/authentication/models/data.dart';
 import 'package:flutter/material.dart';
 
 class DataRecovered extends StatelessWidget{
-  const DataRecovered({Key? key}) : super(key: key);
+  final DermistData data;
+  const DataRecovered({Key? key,required this.data}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    return Container(
+    return SizedBox(
       width: size.width * 0.85,
       child: Column(
         children: [
           const SizedBox(height: 20),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
+            children: [
               Text.rich(
                   TextSpan(
                       text: 'Grado Solar: ',
-                      style:TextStyle(
+                      style:const TextStyle(
                         color: secondaryColor,
                         fontSize:16,
                       ),
                       children: [
                         TextSpan(
-                          text: '1',
-                          style:TextStyle(
+                          text: data.solarGrade,
+                          style:const TextStyle(
                             color: primaryBlack,
                             fontSize:16,
                           ),
@@ -36,14 +38,14 @@ class DataRecovered extends StatelessWidget{
               Text.rich(
                   TextSpan(
                       text: 'Topografía: ',
-                      style:TextStyle(
+                      style:const TextStyle(
                         color: secondaryColor,
                         fontSize:16,
                       ),
                       children: [
                         TextSpan(
-                          text: 'frente',
-                          style:TextStyle(
+                          text: data.topography,
+                          style:const TextStyle(
                             color: primaryBlack,
                             fontSize:16,
                           ),
@@ -56,18 +58,18 @@ class DataRecovered extends StatelessWidget{
           const SizedBox(height: 20),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
+            children: [
               Text.rich(
                   TextSpan(
                       text: 'Ocupación: ',
-                      style:TextStyle(
+                      style:const TextStyle(
                         color: secondaryColor,
                         fontSize:16,
                       ),
                       children: [
                         TextSpan(
-                          text: 'obrero',
-                          style:TextStyle(
+                          text: data.occupation,
+                          style:const TextStyle(
                             color: primaryBlack,
                             fontSize:16,
                           ),
@@ -75,18 +77,18 @@ class DataRecovered extends StatelessWidget{
                       ]
                   )
               ),
-              SizedBox(width: 60),
+              const SizedBox(width: 60),
               Text.rich(
                   TextSpan(
                       text: 'Edad: ',
-                      style:TextStyle(
+                      style:const TextStyle(
                         color: secondaryColor,
                         fontSize:16,
                       ),
                       children: [
                         TextSpan(
-                          text: '22',
-                          style:TextStyle(
+                          text: data.age,
+                          style:const TextStyle(
                             color: primaryBlack,
                             fontSize:16,
                           ),

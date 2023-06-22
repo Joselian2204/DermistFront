@@ -1,12 +1,18 @@
 import 'package:dermist/src/constants/colors.dart';
 import 'package:dermist/src/constants/image_strings.dart';
+import 'package:dermist/src/features/authentication/models/data.dart';
+import 'package:dermist/src/features/authentication/navbar/navbar.dart';
 import 'package:dermist/src/features/authentication/screens/result/Widgets/card_result.dart';
 import 'package:dermist/src/features/authentication/screens/result/Widgets/data_registered.dart';
 import 'package:dermist/src/utils/theme/widget_themes/log_in_btn.dart';
 import 'package:flutter/material.dart';
+import 'package:dermist/src/features/authentication/models/model_result.dart';
+import 'package:get/get.dart';
 
 class ObtainedResult extends StatelessWidget{
-  const ObtainedResult({Key? key}) : super(key: key);
+  final List<ModelResult> listModelResult;
+  final DermistData data;
+  const ObtainedResult({Key? key,required this.listModelResult,required this.data}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -34,41 +40,34 @@ class ObtainedResult extends StatelessWidget{
                 children: [
                   Container(
                     width: size.width * 0.86,
-                    padding: EdgeInsets.symmetric(vertical: 10),
+                    padding: const EdgeInsets.symmetric(vertical: 10),
                     child: const Text(
-                      'Los  resultados que se obtuvieron por Dermist para el caso dermatológico presentado son:',
+                      'Los  resultados que se obtuvieron por Dermist para el presente caso dermatológico son:',
                       style: TextStyle(fontSize: 16),
                     ),
                   ),
                 ],
               ),
               Row(
-                children: const [
-                  DataRecovered(),
+                children: [
+                  DataRecovered(data: data,),
                 ],
               ),
               const SizedBox(height: 30),
-              Row(
-                children: const [
-                  CardResult()
-                ],
-              ),
+              if(listModelResult.isNotEmpty)
+                CardResult(result: listModelResult[0],image: gold),
               const SizedBox(height: 30),
-              Row(
-                children: const [
-                  CardResult()
-                ],
-              ),
+              if(listModelResult.length>1)
+                CardResult(result: listModelResult[1],image: silver),
               const SizedBox(height: 30),
-              Row(
-                children: const [
-                  CardResult()
-                ],
-              ),
+              if(listModelResult.length>2)
+                CardResult(result: listModelResult[2],image: copper,),
               const SizedBox(height: 40,),
               ElevatedButton.icon(
                   style: buttonCamera,
-                  onPressed: (){},
+                  onPressed: (){
+                    Get.offAll(NavBar());
+                  },
                   icon: const Icon(
                     Icons.arrow_back_ios,
                     size: 20,

@@ -1,8 +1,7 @@
+import 'package:dermist/src/features/authentication/controllers/form_controller.dart';
 import 'package:dermist/src/features/authentication/controllers/log_in_controller.dart';
-import 'package:dermist/src/features/authentication/controllers/splash_screen_controller.dart';
 import 'package:dermist/src/features/authentication/screens/splash_screen/splash_screen.dart';
 import 'package:dermist/src/utils/theme/theme.dart';
-import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:get/get.dart';
@@ -15,8 +14,6 @@ void main() async{
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  FirebaseAnalytics analytics = FirebaseAnalytics.instance;
-
   runApp(const MyApp());
 }
 
@@ -28,6 +25,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       initialBinding: BindingsBuilder((){
         Get.put<LogInController>(LogInController());
+        Get.put<FormController>(FormController());
 
       }),
       defaultTransition: Transition.fadeIn,
