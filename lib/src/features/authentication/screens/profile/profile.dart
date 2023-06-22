@@ -45,7 +45,7 @@ class Profile extends StatelessWidget {
                     decoration: BoxDecoration(
                         image: DecorationImage(
                             image: NetworkImage(
-                                logInController.currentUser.value?.photoURL ??
+                                logInController.currentUser.value?.photorul??
                                     ''),
                             fit: BoxFit.cover),
                         color: Colors.grey,
@@ -67,7 +67,7 @@ class Profile extends StatelessWidget {
                     height: 60,
                   ),
                   Text(
-                    logInController.currentUser.value?.displayName ?? '',
+                    logInController.currentUser.value?.name ?? '',
                     style: const TextStyle(
                         color: secondaryColor,
                         fontSize: 24,
