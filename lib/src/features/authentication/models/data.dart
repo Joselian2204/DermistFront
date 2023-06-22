@@ -1,3 +1,5 @@
+import 'package:dermist/src/features/authentication/models/model_result.dart';
+
 class DermistData {
   String topography;
   String age;
@@ -9,6 +11,8 @@ class DermistData {
   String? associated3;
   String? associated4;
   String? previous;
+  String? image;
+  List<ModelResult> result;
 
   DermistData({
     required this.topography,
@@ -21,6 +25,8 @@ class DermistData {
     this.associated3,
     this.associated4,
     this.previous,
+    this.image,
+    required this.result,
   });
 
   Map<String,dynamic> toJson()=>{
@@ -33,6 +39,7 @@ class DermistData {
     "associated2": associated2,
     "associated3": associated3,
     "associated4": associated4,
-    "previous": previous
+    "previous": previous,
+    "image": image,
   };
 }

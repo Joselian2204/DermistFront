@@ -6,13 +6,11 @@ import 'package:dermist/src/features/authentication/screens/result/Widgets/card_
 import 'package:dermist/src/features/authentication/screens/result/Widgets/data_registered.dart';
 import 'package:dermist/src/utils/theme/widget_themes/log_in_btn.dart';
 import 'package:flutter/material.dart';
-import 'package:dermist/src/features/authentication/models/model_result.dart';
 import 'package:get/get.dart';
 
 class ObtainedResult extends StatelessWidget{
-  final List<ModelResult> listModelResult;
   final DermistData data;
-  const ObtainedResult({Key? key,required this.listModelResult,required this.data}) : super(key: key);
+  const ObtainedResult({Key? key,required this.data}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -54,14 +52,14 @@ class ObtainedResult extends StatelessWidget{
                 ],
               ),
               const SizedBox(height: 30),
-              if(listModelResult.isNotEmpty)
-                CardResult(result: listModelResult[0],image: gold),
+              if(data.result.isNotEmpty)
+                CardResult(result: data.result[0],image: gold),
               const SizedBox(height: 30),
-              if(listModelResult.length>1)
-                CardResult(result: listModelResult[1],image: silver),
+              if(data.result.length>1)
+                CardResult(result: data.result[1],image: silver),
               const SizedBox(height: 30),
-              if(listModelResult.length>2)
-                CardResult(result: listModelResult[2],image: copper,),
+              if(data.result.length>2)
+                CardResult(result: data.result[2],image: copper,),
               const SizedBox(height: 40,),
               ElevatedButton.icon(
                   style: buttonCamera,

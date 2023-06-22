@@ -51,10 +51,11 @@ class FormController extends GetxController{
             associated2: associated2,
             associated3: associated3,
             associated4: associated4,
-            previous: previous
+            previous: previous,
+            result: List.from(response.data.map((e)=>ModelResult.fromJson(e)).toList())
         );
         await db.collection("dermistData").add(dermistData.toJson());
-        Get.off(ObtainedResult(data: dermistData,listModelResult: List.from(response.data.map((e)=>ModelResult.fromJson(e)).toList())));
+        Get.off(ObtainedResult(data: dermistData));
       }
     }
     catch(error){

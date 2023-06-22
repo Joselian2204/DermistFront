@@ -12,7 +12,7 @@ class AppPage{
     GetPage(name: home, page: ()=> const HomePage()),
     GetPage(name: formd, page: ()=> FormDermist()),
     GetPage(name: profile, page: ()=> Profile()),
-    GetPage(name: result, page: ()=> ObtainedResult(data: Get.arguments["dermistData"],listModelResult: Get.arguments["data"])),
+    GetPage(name: result, page: ()=> ObtainedResult(data: Get.arguments["dermistData"])),
     GetPage(name: loading, page: ()=> const LoadScreen())
   ];
 

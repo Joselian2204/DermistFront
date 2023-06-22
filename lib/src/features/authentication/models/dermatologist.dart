@@ -4,6 +4,5 @@ class Dermatologist{
   String photorul;
 
   Dermatologist(this.name, this.email, this.photorul);
-
 }
 
