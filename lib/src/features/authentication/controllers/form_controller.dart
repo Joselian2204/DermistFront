@@ -13,7 +13,7 @@ class FormController extends GetxController{
 
   var genderRadius=Rx<int>(1);
 
-  final urlModel="http://34.86.27.73:3000/vgg";
+  final urlModel="http://172.190.255.45:3000/vgg";
   final db = FirebaseFirestore.instance;
 
   imagePicker({
